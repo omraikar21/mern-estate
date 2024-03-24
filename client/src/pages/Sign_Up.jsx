@@ -28,7 +28,7 @@ function Sign_Up() {
     });
     const data = await res.json();
     console.log(data);
-    if (data.success == false) {
+    if (data.success === false) {
       setLoading(false);
       setError[data.message];
       return;
@@ -59,7 +59,7 @@ function Sign_Up() {
         <input type="password" placeholder='password'
          className='border p-3 rounded-lg' id='password' onChange={handleChange}></input>
 
-        <button disabled={loading} className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'>{loading ? 'loading...' : 'Sign Up'} </button>
+        <button disabled={loading} className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'>{loading ? 'loading...' : 'Create Account'} </button>
       </form>
 
       <div className='flex gap-2 mt-5'>
