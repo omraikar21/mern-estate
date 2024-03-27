@@ -16,8 +16,14 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-    }
-}, { timestamps: true});
+    },
+    avatar:{
+        type: String,
+        default: "https://thumbs.dreamstime.com/b/businessman-avatar-image-beard-hairstyle-male-profile-vector-illustration-178545831.jpg"
+    },
+}, 
+{ timestamps: true}
+);
 
 
 const User = mongoose.model('User', userSchema);
